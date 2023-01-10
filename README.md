@@ -1,6 +1,14 @@
 # Previsão e informações do clima
 
-## Baixar datasets:
+## Primeiro Passo
+Instalar as dependências do projeto
+
+```
+pip install -r requirements.txt
+```
+
+
+## Como baixar os datasets:
 
 1) Execute o comando abaixo para compilar o código para baixar todos os datasets (já está configurado)
     ```

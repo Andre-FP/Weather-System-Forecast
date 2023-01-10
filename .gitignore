@@ -1,0 +1,36 @@
+siteconfig/staticfiles
+siteconfig/whitenoise_root
+siteconfig/logs/*
+*pycache*
+*.sw?
+.python-version
+*staticfiles*
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+**/.*
+!.gitignore
+!.dockerignore
+*~
+*.pyc
+.*.*.s*
+node_modules/
+
+# Serverless directories
+.serverless
+

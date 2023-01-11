@@ -11,8 +11,8 @@ CPPFLAGS = -Wall -std=c++11 -I/usr/include/python3.8
 LIBFLAG = -lpython3.8
 
 # Main Program
-MAIN_OBJ =
-TRAB_CLASSES_OBJ = api.o download.o
+MAIN_OBJ = main.o
+TRAB_CLASSES_OBJ = predict.o download_api.o cidade.o global.o
 TRAB_OBJ = $(MAIN_OBJ) $(TRAB_CLASSES_OBJ)
 TRAB = trab_final
 

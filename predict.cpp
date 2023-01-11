@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "predict.h"
 
 using namespace std;
 
@@ -31,21 +32,21 @@ vector<string> call_wether_predictor(string dataset_path_str, string target_colu
 
     // Chamando a função com os argumentos
     result = PyObject_CallFunction(wether_predict, "sss", dataset_path, target_column, day);
-    
+
     // Formatando o resultado para retorná-los
     result_str = PyUnicode_AsUTF8(result);
     predicted_value = result_str.substr(0, result_str.find_first_of(" ") + 1);
     real_value = result_str.substr(result_str.find_first_of(" ") + 1, result_str.size());
 
-    cout << "Predicted value: " << predicted_value << endl;
-    cout << "Real value: " << real_value << endl;
+    cout << "\nValor predito: " << predicted_value << endl;
+    cout << "Valor real: " << real_value << endl;
     
     // Finalizar o interpretador Python
     Py_Finalize();
 
     return {predicted_value, real_value};
 }
-
+/*
 int main(){
     call_wether_predictor("./datas/archive_manaus.csv", "temperature_2m_max (°C)", "31/12/2022");
-}
+}*/

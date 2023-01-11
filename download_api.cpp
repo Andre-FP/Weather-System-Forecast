@@ -34,7 +34,7 @@ int call_download_all_datasets(string end_date_str="2022-12-31")
     Py_Finalize();
     return 0;
 }
-
+/*
 int main(){
     call_download_all_datasets();
-}
+}*/

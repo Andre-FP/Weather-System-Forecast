@@ -33,6 +33,10 @@ def wether_predict(dataset_path, target_column, day):
     ### Lendo o csv ###
     df = pd.read_csv(dataset_path)
 
+    # Guardando as colunas sem shift
+    columns_no_shift = list(df.columns)
+    columns_no_shift.remove("time")
+
     ## Shiftando o dataset para incluir dados passados
     columns = list(df.columns)
     columns.remove("time")
@@ -41,13 +45,17 @@ def wether_predict(dataset_path, target_column, day):
         last = column.split("_")[-1]
         last = last.split(" ")[0]
         
-        df[f"{first}_{last}_lastMounth"] = df[column].shift(1)
+        df[f"{first}_{last}_lastDay"] = df[column].shift(1)
         for i in range(1, shift_times):
-            df[f"{first}_{last}_{i+1}MounthsBack"] = df[column].shift(i + 1)
+            df[f"{first}_{last}_{i+1}DaysBack"] = df[column].shift(i + 1)
 
     df = df.drop(df.index[0:shift_times])
     df = df.reset_index()
     df = df.drop("index", axis=1)
+
+    exclude_columns = columns_no_shift.copy()
+    exclude_columns.remove(target_column)
+    df = df.drop(exclude_columns, axis=1)
 
     ## Separando treino e teste
     df_test = df.iloc[-341:]
@@ -78,6 +86,7 @@ def wether_predict(dataset_path, target_column, day):
     ## Retornando a previsão desejada
     time_test["predictions"] = pd.Series(list(y_pred))
     time_test["real_value"] = Y_test
+
     prediction_desired = float(time_test.loc[time_test["time"] == day, "predictions"])
     real_value = float(time_test.loc[time_test["time"] == day, "real_value"])
 

@@ -7,16 +7,17 @@ Instalar as dependências do projeto
 pip install -r requirements.txt
 ```
 
+## Compilando o programa:
 
-## Como baixar os datasets:
+Para compilar o programa é necessário que o computador em questão tenha instalado o python, de preferência o python 3.8.
+Caso a versão seja diferente, será necessário fazer uma alteração no Makefile na linha 10 na flag -I e na linha 11 na flag -l:
+    "CPPFLAGS = -Wall -std=c++11 -I/usr/include/python3.8"
+    "LIBFLAG = -lpython3.8"
 
-1) Execute o comando abaixo para compilar o código para baixar todos os datasets (já está configurado)
+Com isso já será possível compilar o programa
+
+
+1) Para compilar o programa, digite:
     ```
-    make download_data
-    ```
-
-
-2) Execute o programa. Os dados são guardados na pasta "datas"
-    ```
-    ./download_data
+    make trab_final
     ```

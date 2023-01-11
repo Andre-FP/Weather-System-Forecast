@@ -1,3 +1,12 @@
+/* Universidade Federal do Rio de Janeiro
+ * Escola Politecnica
+ * Departamento de Eletronica e de Computacao
+ * EEL670 - Ling. Prog. - Turma 2022/2
+ * Prof. Miguel Elias Mitre Campista
+ * Autor: Andre de Farias Pereira e Gabriela Sasso Viegas Rego
+ * Descricao: Trabalho Final - Manipulações e Previsões Meteorológica.
+ */
+
 #include "cidade.h"
 #include "global.h"
 #include "predict.h"
@@ -255,10 +264,7 @@ int main()
 	}
     return OK;
 }
-void getMaxValue()
-{
 
-}
 void printString(vector<string> vetor)
 {
 	for(long long unsigned i=0; i <vetor.size(); i++){

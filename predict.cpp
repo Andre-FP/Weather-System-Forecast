@@ -7,7 +7,6 @@
 
 using namespace std;
 
-
 vector<string> call_wether_predictor(string dataset_path_str, string target_column_str, string day_str)
 {
     string predicted_value, real_value;
@@ -46,7 +45,3 @@ vector<string> call_wether_predictor(string dataset_path_str, string target_colu
 
     return {predicted_value, real_value};
 }
-/*
-int main(){
-    call_wether_predictor("./datas/archive_manaus.csv", "temperature_2m_max (°C)", "31/12/2022");
-}*/

@@ -1,7 +1,7 @@
 # Weather forecast and information
 
 Program made in C++ with interface with Python. 
-The main program is written in C++ and provides weather information for the target period, from a weather database extracted in: .
+The main program is written in C++ and provides weather information for the target period, from the weather database: https://open-meteo.com/.
 The Python part do a prediction task for weather forecast in any selected choice: Temperature max, temperature min, shortwave radiation sum, rain sum, or windspeed max. 
 
 ## First step

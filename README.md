@@ -1,23 +1,27 @@
-# Previsão e informações do clima
+# Weather forecast and information
 
-## Primeiro Passo
-Instalar as dependências do projeto
+Program made in C++ with interface with Python. 
+The main program is written in C++ and provides weather information for the target period, from a database of weather.
+The Python part do a prediction task for weather forecast in any selected choice: Temperature max, temperature min, shortwave radiation sum, rain sum, or windspeed max. 
+
+## First step
+Install project dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-## Compilando o programa:
+## Compiling the program:
 
-Para compilar o programa é necessário que o computador em questão tenha instalado o python, de preferência o python 3.8.
-Caso a versão seja diferente, será necessário fazer uma alteração no Makefile na linha 10 na flag -I e na linha 11 na flag -l:
-    "CPPFLAGS = -Wall -std=c++11 -I/usr/include/python3.8"
-    "LIBFLAG = -lpython3.8"
+To compile the program, the computer must have Python installed, preferably Python 3.8.
+If the version is different, it will be necessary to make a change in the Makefile on line 10 in the -I flag and in line 11 in the -l flag:
+     "CPPFLAGS = -Wall -std=c++11 -I/usr/include/python3.8"
+     "LIBFLAG = -lpython3.8"
 
-Com isso já será possível compilar o programa
+With this it will be possible to compile the program
 
 
-1) Para compilar o programa, digite:
-    ```
-    make trab_final
-    ```
+1) To compile the program, type:
+     ```
+     make work_final
+     ```
